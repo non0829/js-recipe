@@ -1,0 +1,20 @@
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: violet;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: violet;
+}
+
+.triangle {
+  width: 0px;
+  height: 0px;
+  border-bottom: 100px solid violet;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
