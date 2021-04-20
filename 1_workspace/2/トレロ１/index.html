@@ -11,48 +11,58 @@
     <header>
       <div class="header-title">Trello?</div>
     </header>
-    <div class="main-container">
-      <div class="list-container">
-        <div class="list-header">ギークサロン</div>
-        <div class="cards-container" id="cards-container">
-          <!-- ここにカードを追加する -->
+    <main>
+      <div class="main-container" id="main">
+        <div class="list-container">
+          <div class="list-header">ギークサロン</div>
+          <div class="cards-container" id="cards-container">
+            <!-- ここにカードを追加する -->
+          </div>
+          <div class="list-footer">
+            <div class="input-container">
+              <input type="text" class="input-todo" id="input-todo" placeholder="add todo list"/>
+              <div class="input-button" id="add-button1">追加</div>
+            </div>
+          </div>
         </div>
-        <div class="list-footer">
-          <div class="input-container">
-            <input type="text" class="input-todo" id="input-todo" />
-            <div class="input-button" id="add-button">追加</div>
+        <div class="list-container">
+          <div class="list-header">大学</div>
+          <div class="cards-container">
+            <!-- ここに追加 -->
+          </div>
+          <div class="list-footer">
+            <div class="input-container">
+              <input type="text" class="input-todo" placeholder="add todo list"/>
+              <div class="input-button" id="add-button2">追加</div>
+            </div>
+          </div>
+        </div>
+        <div class="list-container">
+          <div class="list-header">家事</div>
+          <div class="cards-container">
+            <!-- ここに追加 -->
+          </div>
+          <div class="list-footer">
+            <div class="input-container">
+              <input type="text" class="input-todo" placeholder="add todo list"/>
+              <div class="input-button" id="add-button3">追加</div>
+            </div>
+          </div>
+        </div>
+        <div class="list-container">
+          <div class="list-header" id="newTitle">新しいこと</div>
+          <div class="cards-container">
+            <!-- ここに追加 -->
+          </div>
+          <div class="list-footer">
+            <div class="input-container">
+              <input type="text" class="input-todo" id="newWord" placeholder="Enter this file title"/>
+              <div class="input-button" id="add-button4">New</div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="list-container">
-        <div class="list-header">大学</div>
-        <div class="cards-container">
-          <div class="card">
-            <div class="todo">これをやる</div>
-            <div class="delete"></div>
-          </div>
-          <div class="card">
-            <div class="todo">それをやる</div>
-            <div class="delete"></div>
-          </div>
-        </div>
-        <div class="list-footer">＋カードを追加</div>
-      </div>
-      <div class="list-container">
-        <div class="list-header">家事</div>
-        <div class="cards-container">
-          <div class="card">
-            <div class="todo">あれをやる</div>
-            <div class="delete"></div>
-          </div>
-          <div class="card">
-            <div class="todo">どれをやる</div>
-            <div class="delete"></div>
-          </div>
-        </div>
-        <div class="list-footer">＋カードを追加</div>
-      </div>
-    </div>
+    </main>
     <script src="main.js"></script>
   </body>
 </html>
