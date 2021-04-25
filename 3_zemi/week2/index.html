@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1></h1>
+    <input type="text" id="memo-input" />
+    <button id="add-button">追加</button>
+    <button id="change">並び替え</button>
+    <div id="memo-container"></div>
+
+    <script>
+      const memoInput = document.getElementById("memo-input")
+      const addButton = document.getElementById("add-button")
+      const memoContainer = document.getElementById("memo-container")
+      const change = document.getElementById("change")
+
+      let memos = []
+
+      addButton.onclick = function() {
+        memos.push(memoInput.value)
+        
+        createMemo()
+      }
+      
+      change.onclick = function() {
+        memos = memos.sort()
+        console.log(memos)
+        
+        createMemo()
+      }
+
+      const createMemo = function() {
+        memoContainer.innerHTML = ""
+        for(i = 0 ; i <= memos.length; i++) {
+          const card = document.createElement("div")
+          card.textContent = memos[i]
+          memoContainer.append(card)
+        }
+      }
+    
+    </script>
+  </body>
+</html>
