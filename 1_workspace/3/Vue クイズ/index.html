@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue クイズ 練習</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>Q. {{quiz[currentNumber].title}}</h2>
+      <img v-bind:src="createImgUrl" alt="" id="main-image" />
+      <div class="container">
+        <button
+          v-for="(choice, i) in quiz[currentNumber].choices"
+          v-bind:key="i"
+          v-on:click="changeText(choice)"
+        >
+          {{choice.text}}
+        </button>
+      </div>
+      <div>{{feedback}}</div>
+      <div v-if="isCorrect === true">
+        <button v-on:click="changeQuiz">次の問題</button>
+      </div>
+    </div>
+
+    <style>
+      #app {
+        text-align: center;
+        width: 60%;
+        margin: 0 auto;
+      }
+      #main-image {
+        width: 300px;
+        height: 300px;
+      }
+      .container {
+        display: inline-block;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      button {
+        margin: 20px 0;
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
